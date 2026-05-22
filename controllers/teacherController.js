@@ -1,0 +1,9 @@
+const Teacher = require('../models/teacherModel');
+const AppError = require('../utils/appError');
+const handlerFactory = require('../utils/handlerFactory');
+const catchAsync = require('../utils/catchAsync');
+exports.getTeacher = handlerFactory.getOne(Teacher);
+exports.createTeacher = handlerFactory.createOne(Teacher);
+exports.updateTeacher = handlerFactory.updateOne(Teacher);
+exports.deleteTeacher = handlerFactory.deleteOne(Teacher);
+exports.getAllTeacher = handlerFactory.getAll(Teacher);

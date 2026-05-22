@@ -1,0 +1,9 @@
+const Academy = require('../models/academyModel');
+const AppError = require('../utils/appError');
+const handlerFactory = require('../utils/handlerFactory');
+const catchAsync = require('../utils/catchAsync');
+exports.getAcademy = handlerFactory.getOne(Academy);
+exports.createAcademy = handlerFactory.createOne(Academy);
+exports.updateAcademy = handlerFactory.updateOne(Academy);
+exports.deleteAcademy = handlerFactory.deleteOne(Academy);
+exports.getAllAcademy = handlerFactory.getAll(Academy);
